@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Finished Tasks</h1>
+  <div class="badge">
+    <button (click)="comeBack()" mat-stroked-button color="primary">Come back</button>
+  </div>
+  
+  <div class="content" *ngFor="let item of listFinished">
+    <mat-card class="mat-elevation-z8">
+      <p>Date to finish: {{ item.dateToFinish }}</p>
+      <mat-card-header>
+        <mat-card-title>{{ item.title }}</mat-card-title>
+        <mat-card-subtitle>{{ item.description }}</mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+  </div>
+</div>
